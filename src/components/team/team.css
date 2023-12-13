@@ -1,0 +1,92 @@
+.team {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: #fff;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 100px;
+}
+.team .container .box {
+  position: relative;
+  z-index: 1;
+  /* background-color: #fff; */
+}
+/* ************ sudo Elemets ******************** */
+.team .container .box::before,
+.team .container .box::after {
+  content: "";
+  position: absolute;
+  background-color: #f3f3f3;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+.team .container .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+.team .container .box::after {
+  z-index: -1;
+  background: #e4e4e4;
+  width: 0;
+  transition: var(--main-transition);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HOVER ~~~~~~~~~~~ */
+.team .container .box:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team .container .box:hover img {
+  filter: grayscale(100%);
+}
+.team .container .box .socials svg:hover {
+  color: var(--main-color);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HOVER ~~~~~~~~~~~ */
+/* ************ sudo Elemets ******************** */
+.team .container .box .data {
+  display: flex;
+  padding-top: 60px;
+  align-items: center;
+}
+.team .container .box .data img {
+  width: calc(100% - 60px);
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+.team .container .box .socials {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.team .container .box .socials a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .container .box .socials svg {
+  font-size: 20px;
+  color: #d5d5d5;
+}
+.team .container .box .info {
+  width: calc(100% - 60px);
+  margin-left: 80px;
+  text-transform: capitalize;
+}
+.team .container .box .info h3 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.team .container .box .info p {
+  color: #777;
+  margin-top: 0;
+}

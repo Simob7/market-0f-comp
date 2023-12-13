@@ -1,0 +1,117 @@
+.gallery {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+  overflow: hidden;
+}
+.gallery .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 10px;
+  /* width: 100%; */
+}
+.gallery .container .box {
+  max-width: 30%;
+  position: relative;
+  background-color: var(--main-color);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+.image-holder {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .container .box img {
+  /* max-width: 400px; */
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: var(--main-transition);
+}
+.gallery .container .box .image-holder::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa2e;
+  z-index: 999;
+  opacity: 0;
+  border-radius: 50%;
+}
+.gallery .container .box:hover .image-holder::before {
+  animation: flashing 0.7s;
+}
+.gallery .container .box:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+.numbers {
+  display: none;
+}
+/* ANIMATION ================ */
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 150%;
+    height: 150%;
+  }
+}
+
+/* ANIMATION ================ */
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ MEDIA QUERIS \\\\\\\\\\\\ */
+@media (max-width: 991px) {
+  .gallery .container {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.7s;
+    max-width: 90%;
+  }
+  .gallery .container::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery .container .box {
+    position: relative;
+    scroll-snap-align: center;
+    padding: 10px;
+    min-width: 99%;
+  }
+  .gallery .container .box img {
+    /* max-width: 300px; */
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .numbers {
+    display: flex;
+    position: absolute;
+    background-color: #444;
+    color: white;
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 20px;
+  }
+}

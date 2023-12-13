@@ -1,0 +1,64 @@
+.services {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: #fff;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.services .container .box {
+  background-color: #d5d5d5;
+  /* padding: 20px; */
+  padding-bottom: 0;
+  border-radius: 10px;
+  counter-increment: services;
+  position: relative;
+  transition: var(--main-transition);
+}
+.services .container .box span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #777;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.services .container .box h3 {
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.services .container .box .info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  background-color: red;
+  padding: 10px 0;
+  position: relative;
+}
+/* ?????????????????????????????????????????????? sudo elements /?????????????????????????????? */
+.services .container .box .info::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #f3f3f3;
+  top: 0;
+  left: 0;
+}
+.services .container .box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ?????????????????????????????????????????????? sudo elements /?????????????????????????????? */
