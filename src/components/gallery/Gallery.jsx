@@ -11,8 +11,8 @@ const Gallery = ({ gallery }) => {
           {gallery.map((item, idx) => (
             <div id={item.id} className="box" key={idx}>
               <div className="image-holder">
-              <span className="numbers">{`${item.id}/${gallery.length}`}</span>
-              <img src={`/assets/images/${item.img}`} alt="" />
+                <span className="numbers">{`${item.id}/${gallery.length}`}</span>
+                <img src={`assets/images/${item.img}`} alt="" />
               </div>
             </div>
           ))}
