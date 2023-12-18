@@ -1,6 +1,7 @@
 import React from "react";
 import "./landing.css";
 import { HiOutlineBarsArrowDown } from "react-icons/hi2";
+import {} from "../../data.js";
 const Landing = () => {
   return (
     <div className="landing">
@@ -14,10 +15,10 @@ const Landing = () => {
             </p>
           </div>
           <div className="image">
-            <img src="/assets/images/landing.jpg" alt="landing-page" />
             <img src="/assets/images/cat-01.jpg" alt="landing-page" />
-            <img src="/assets/images/cat-02.jpg" alt="landing-page" />
-            <img src="/assets/images/cat-03.jpg" alt="landing-page" />
+            <img src="/assets/images/cat-05.jpg" alt="" />
+            <img src="/assets/images/cat-05.jpg" alt="" />
+            <img src="/assets/images/cat-05.jpg" alt="cat" />
           </div>
         </div>
         <a className="go-down" href="#articles">

@@ -98,9 +98,10 @@
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
   display: flex;
-  justify-content: start;
+  gap: 10px;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 100vw;
+  width: 100%;
 }
 .landing .container .image::-webkit-scrollbar {
   display: none;
@@ -108,7 +109,6 @@
 .landing .container .image img {
   width: 100vw;
   scroll-snap-align: center;
-  max-width: 100%;
   border-radius: 10px;
   /* transition: 1s; */
   position: relative;
