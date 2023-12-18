@@ -15,10 +15,10 @@ const Landing = () => {
             </p>
           </div>
           <div className="image">
-            <img src="/assets/images/cat-01.jpg" alt="landing-page" />
-            <img src="/assets/images/cat-02.jpg" alt="" />
-            <img src="/assets/images/cat-03.jpg" alt="" />
-            <img src="/assets/images/cat-04.jpg" alt="cat" />
+            <img src="assets/images/cat-01.jpg" alt="landing-page" />
+            <img src="assets/images/cat-02.jpg" alt="" />
+            <img src="assets/images/cat-03.jpg" alt="" />
+            <img src="assets/images/cat-04.jpg" alt="cat" />
           </div>
         </div>
         <a className="go-down" href="#articles">
